@@ -10,18 +10,18 @@ import pl.grzegorzkaczor.microblog.service.UserService;
 
 @Controller
 @RequestMapping("/")
-public class userController {
+public class UserController {
 
 
     private UserService userService;
 
-    public userController(UserService userService) {
+    public UserController(UserService userService) {
         this.userService = userService;
     }
 
     @GetMapping
     public String userLogin(){
-        return "index.html";
+        return "login.html";
     }
 
     @PostMapping("/registration")
