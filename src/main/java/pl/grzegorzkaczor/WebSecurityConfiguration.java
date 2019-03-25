@@ -1,4 +1,4 @@
-package pl.grzegorzkaczor.microblog.service;
+package pl.grzegorzkaczor;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -7,6 +7,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import pl.grzegorzkaczor.microblog.repository.UserRepository;
+import pl.grzegorzkaczor.microblog.service.UserDetailsServiceImpl;
 
 public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 

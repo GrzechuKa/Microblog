@@ -1,14 +1,11 @@
 package pl.grzegorzkaczor.microblog.contoller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import pl.grzegorzkaczor.microblog.model.user.UserDTO;
 import pl.grzegorzkaczor.microblog.service.UserService;
 
-@Controller
+@RestController
 @RequestMapping("/")
 public class UserController {
 
@@ -24,10 +21,10 @@ public class UserController {
         return "login.html";
     }
 
-    @PostMapping("/registration")
-    public void registerUser (@RequestBody UserDTO userDTO){
-        userService.registerUser(userDTO);
-    }
+//    @PostMapping("/registration")
+//    public void registerUser (@RequestBody UserDTO userDTO){
+//        userService.registerUser(userDTO);
+//    }
 //    @GetMapping
 //    public String
 
