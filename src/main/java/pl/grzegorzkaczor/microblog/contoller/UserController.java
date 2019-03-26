@@ -6,7 +6,6 @@ import pl.grzegorzkaczor.microblog.model.user.UserDTO;
 import pl.grzegorzkaczor.microblog.service.UserService;
 
 @RestController
-@RequestMapping("/")
 public class UserController {
 
 
@@ -16,9 +15,8 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping
-    public String userLogin(){
-        return "login.html";
+    @PostMapping("/login")
+    public void login(){
     }
 
 //    @PostMapping("/registration")
