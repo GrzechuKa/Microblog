@@ -1,8 +1,7 @@
 package pl.grzegorzkaczor.microblog.contoller;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
-import pl.grzegorzkaczor.microblog.model.user.UserDTO;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
 import pl.grzegorzkaczor.microblog.service.UserService;
 
 @RestController

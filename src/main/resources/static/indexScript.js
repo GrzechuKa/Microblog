@@ -5,7 +5,7 @@ $.ajax({
         $("#div-online").hide();
     },
     error: function f() {
-        $("#div-logged-out").hide()
+        $("#div-logged-out").hide();
     }
 });
 
@@ -25,11 +25,10 @@ $("#button-login").click(function () {
             alert("Zalogowano!");
             $("#div-logged-out").hide();
             $("#div-online").show();
-
         },
-        error: function f() {
+        error: function () {
             alert("Niepoprawne dane!");
-            $("#div-logged-out").hide()
+            $("#div-logged-out").show();
         }
     });
 });

@@ -20,7 +20,6 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
         this.userDetailsService = userDetailsService;
     }
 
-
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.httpBasic()
@@ -36,7 +35,6 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .anyRequest()
                 .authenticated();
     }
-
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
