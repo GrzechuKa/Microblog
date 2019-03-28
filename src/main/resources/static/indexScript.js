@@ -2,14 +2,12 @@ $.ajax({
     method: "post",
     url: "http://localhost:8080/login",
     success: function () {
-        $("#div-online").hide();
+        $("#div-logged-in").hide();
     },
     error: function f() {
-        $("#div-logged-out").hide();
+        $("#div-login").hide();
     }
 });
-
-
 
 $("#button-login").click(function () {
     const username = $("#username").val();
@@ -23,12 +21,25 @@ $("#button-login").click(function () {
         },
         success: function () {
             alert("Zalogowano!");
-            $("#div-logged-out").hide();
-            $("#div-online").show();
+            $("#div-login").hide();
+            $("#div-logged-in").show();
         },
         error: function () {
             alert("Niepoprawne dane!");
-            $("#div-logged-out").show();
+            $("#div-login").show();
+        }
+    });
+});
+
+$("#button-logout").click(function () {
+    $.ajax({
+        method: "get",
+        url: "http://localhost:8080/logout",
+
+        success: function f() {
+            alert("Wylogowano");
+            $("#div-login").show();
+            $("#div-logged-in").hide();
         }
     });
 });

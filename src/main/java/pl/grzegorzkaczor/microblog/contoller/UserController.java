@@ -8,23 +8,7 @@ import pl.grzegorzkaczor.microblog.service.UserService;
 public class UserController {
 
 
-    private UserService userService;
-
-    public UserController(UserService userService) {
-        this.userService = userService;
-    }
-
     @PostMapping("/login")
     public void login(){
     }
-
-//    @PostMapping("/registration")
-//    public void registerUser (@RequestBody UserDTO userDTO){
-//        userService.registerUser(userDTO);
-//    }
-//    @GetMapping
-//    public String
-
-
-
 }
