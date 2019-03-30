@@ -14,12 +14,12 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-//    public void registerUser(UserDTO userDTO){
-//        User user = new User();
-//        user.setUniqueName(userDTO.getUniqueName());
-//        user.setLogin(userDTO.getLogin());
-//        user.setPassword(userDTO.getPassword());
-//        userRepository.save(user);
-//    }
-
+    public void create(UserDTO userDTO) {
+        User user = new User();
+        user.setUsername(userDTO.getUsername());
+        user.setPassword(userDTO.getPassword());
+        user.setUniqueName(userDTO.getUniqueName());
+        user.setRole(User.Role.USER);
+        userRepository.save(user);
+    }
 }

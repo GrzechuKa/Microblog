@@ -1,6 +1,7 @@
 package pl.grzegorzkaczor.microblog.model.user;
 
 import lombok.Data;
+import org.springframework.data.annotation.CreatedDate;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -11,6 +12,7 @@ import java.time.LocalDate;
 import java.util.Collection;
 import java.util.Collections;
 
+@Data
 @Entity
 public class User implements UserDetails {
     @Id
@@ -22,6 +24,7 @@ public class User implements UserDetails {
     private String password;
     @NotNull
     private String uniqueName;
+    @CreatedDate
     private LocalDate registrationDate;
     @Enumerated(EnumType.STRING)
     private Role role;

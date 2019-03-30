@@ -2,10 +2,10 @@ $.ajax({
     method: "post",
     url: "http://localhost:8080/login",
     success: function () {
-        $("#div-logged-in").hide();
+        $("#div-login").hide();
     },
     error: function f() {
-        $("#div-login").hide();
+        $("#div-logged-in").hide();
     }
 });
 
